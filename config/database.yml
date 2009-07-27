@@ -1,7 +1,7 @@
 login: &login
   adapter: mysql
   username: mt_mt
-  password: 
+  password: NoPostage6* 
   host: localhost
   port: 3306
 
@@ -21,4 +21,4 @@ test:
 
 production:
   <<: *login
-  database: sw-portal-dev
+  database: mt_menstimes
