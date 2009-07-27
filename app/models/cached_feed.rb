@@ -1,4 +1,4 @@
-require 'feed_tools'
+#require 'feed_tools'
 class CachedFeed < ActiveRecord::Base
   validates_presence_of :uri, :parsed_feed
   validates_uniqueness_of :uri
