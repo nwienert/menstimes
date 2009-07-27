@@ -1,0 +1,26 @@
+     <div id="left" class="section">
+     
+     </div>
+     
+     <div id="mid" class="section">
+
+     </div>
+     
+     <div id="right" class="section">
+
+     </div>
+
+     <div id="hide">
+     <% cache do %>
+     <%
+      lastday = -1
+      @aggregate[0,100].each do |item| %>
+        <div class="post feed-<%= item[:feed_item][:class] %>">
+          <h2 class="post-title"><%= item[:feed_item][:title] %> <span><a href="<%= item[:feed_item][:link] %>"><%= item[:feed_title] %></a></span></h2>
+          <em class="post-date"><%= item[:feed_item][:published].getlocal.strftime('%A, %B %e') %></em>
+          <div class="post-body"><%= item[:feed_item][:body] %> <span class="post-fade"></span></div>
+          <a href="" class="zoom">Zoom &oplus;</a>
+        </div>
+     <% end %>
+     <% end %>
+     </div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>MensTimes | The Gentleman's Daily for Style, Gear, Music, and Design</title>
+    <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" />
+    <script src="/javascripts/jquery.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery.scrollTo-min.js" type="text/javascript"></script>
+    <script src="/javascripts/application.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="head">
+      <h1>MensTimes</h1>
+      <a id="about" href="#">about</a>
+      <ul>
+      	<!--<li></li>
+        <li><a href="">Sites</a>
+          <ul>
+            <li><a href="">Name</a></li>
+            <li><a href="">Name</a></li>
+            <li><a href="">Name</a></li>
+            <li><a href="">Name</a></li>
+            <li><a href="">Name</a></li>
+            <li><a href="">Name</a></li>
+          </ul>
+        </li>
+        <li><a href="">Categories</a>
+          <ul>
+            <li><a href="">Style</a></li>
+            <li><a href="">Gear</a></li>
+            <li><a href="">Design</a></li>
+          </ul>
+        </li>-->
+        <li class="right expand"><a href="#">Show &darr;</a>
+          <ul>
+            <li><a id="show-default" href="">Default</a></li>
+            <li><a id="show-full" href="">Full</a></li>
+            <li><a id="show-pics" href="">Pictures</a></li>
+          </ul>
+        </li>
+        <li class="right font-plus"><a href=""><big>Font</big></a></li>
+        <li class="right font-minus"><a href=""><small>Font</small></a></li>
+        <li class="right wider"><a href="">&rsaquo;&rsaquo;</a></li>
+        <li class="right thinner"><a href="">&lsaquo;&lsaquo;</a></li>
+      </ul>
+    </div>
+  
+    <div id="main">
+        <%= yield %>
+    </div>
+    
+  	<div id="post_modal"></div><div id="overlay"></div>
+  </body>
+</html>

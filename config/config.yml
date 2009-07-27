@@ -1,0 +1,44 @@
+# See http://github.com/eugenebolshakov/app_config
+# parsed as ERB & YAML
+# accessible as Conf.whatever
+# NB must reload app after changing this file
+
+common:
+  # Change the secret to protect your site from DoS attack
+  secret: o3iu323432io4u23io4
+  # The array of feeds you want to aggregate. If you change this then manually delete the whole cache.
+  feeds:
+   - http://feeds.feedburner.com/contemporist
+   - http://feeds.feedburner.com/acquire
+   - http://stylecrave.com/feed/
+   - http://www.coolhunting.com/index.xml
+   - http://feeds.feedburner.com/uncrate
+   - http://www.esquire.com/rss/
+   - http://feeds2.feedburner.com/Swissmiss
+   - http://feeds.feedburner.com/urbanspy
+   - http://hypebeast.com/feed/
+   - http://feeds.feedburner.com/selectism/rss?format=xml
+   - http://streetetiquette.com/feed/
+   - http://www.highsnobiety.com/news/feed/
+   - http://www.wyendrys.com/feed
+#   - http://plastolux.com/feed
+   - http://www.colectiva.tv/wordpress/lang/en-us/feed
+   - http://design-milk.com/feed/
+   - http://www.getkempt.com/rss.xml
+   - http://men.style.com/services/rss/feeds/mens_features.xml
+   - http://www.theexecutivescloset.com/blog/?feed=rss2
+#   - http://www.luxist.com/tag/@featured/rss.xml
+   - http://www.rollingstone.com/rssxml/album_reviews.xml
+   - http://hypem.com/feed/popular/3day/1/feed.xml
+   - http://www.engadget.com/tag/features/rss.xml
+   - http://gizmodo.com/tag/bestmodo/index.xml
+   - http://feeds.feedburner.com/fubiz
+   - http://www.stylepark.com/srv.do?op=xml_rss&site=stylepark&lang=en
+   - http://www.archdaily.com/feed/
+
+
+#development:
+
+#test:
+
+#deployment:
