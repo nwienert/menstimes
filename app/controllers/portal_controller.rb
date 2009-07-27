@@ -1,4 +1,4 @@
-require 'feed_tools'
+#equire 'feed_tools'
 
 # This is a feed aggregator that uses FeedTools because it handles practically any feed.
 # But FeedTools is super slow in every way so this aggregator stops using it as soon as possible.
