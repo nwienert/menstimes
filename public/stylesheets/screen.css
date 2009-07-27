@@ -1,0 +1,266 @@
+/* Base
+--------------------------------------------- */
+ul, li, body, h1 {margin: 0; padding: 0;}
+ul {list-style: none;}
+img {border: 0;}
+p, ul, form, h2, h3 {margin: 0 0 .8em 0;}
+div:after, li:after {content: ".";display: block;overflow: hidden;height: 0;clear: both;visibility: hidden;line-height: 0em;}
+body {
+	font: 80%/150% Georgia, Serif;
+	background: #eee;
+}
+
+a:hover {color: #0bbfe0;}
+a {color: #155da9;}
+.hide,#hide{display:none;}
+.hide.show{display:inline;}
+strong {font-weight: normal;}
+
+/* Containers
+--------------------------------------------- */
+#head {
+	background: #000;
+	position: fixed;
+	width: 100%;
+	z-index: 3000;
+}
+
+	#head h1 {
+		display: block;
+		width: 130px;
+		height: 18px;
+		background: url('/images/logo.png') no-repeat center left;
+		text-indent: -3000em;
+		overflow: hidden;
+		float: left;
+		margin: 5px 0 0 15px;
+	}
+	
+	#head a {
+		color: #d30203;
+	}
+	
+	#head #about {
+		font-size: 11px;
+		color: #999;
+		padding: 6px;
+		float: left;
+	}
+	
+	#head ul {
+		border-right: 1px solid #555;
+		float: right;
+		margin: 0 15px 0 0;
+	}
+	
+		#head li {
+			border-right: 1px solid #555;
+			float: left;
+			padding: 6px 0;
+		}
+		
+		#head li:hover > ul {
+			display: block;
+		}
+		
+		#head li ul {
+			top: 30px;
+			background: #000;
+			position: absolute;
+			display: none;
+			width: 180px;
+			border-top: 1px solid #555;
+		}
+		
+		#head li.expand ul {
+			right: 0;
+			width: 80px;
+		}
+		
+			#head li ul li {
+				display: block;
+				float: none;
+				border-right: none;
+				border-bottom: 1px solid #555;
+				padding: 0;
+			}
+			
+				#head li ul li a {
+					display: block;
+					padding: 4px 6px;
+				}
+		
+		#head li.right {
+			float: right;
+			border-right: none;
+			border-left: 1px solid #555;
+		}
+		
+			#head li a {
+				padding: 8px 12px;
+				font-size: 13px;
+				text-decoration: none;
+			}
+
+#head li a:hover {
+	background: #333;
+	color: #fff;
+}
+
+#main {
+	overflow: hidden;
+	width: 1070px;
+	padding: 30px 0 0;
+	background: #fff;
+}
+		
+	#main #left {
+		width: 550px;
+		line-height: 1.8em;
+	}
+	
+		#main #left p {
+			font-size: 14px;
+		}
+
+	#main #mid {
+		width: 230px;
+		font-size: 12px;
+		line-height: 1.5em;
+		color: #666;
+	}
+	
+		#main #mid h2 {
+			font-size: 14px;
+			color: #444;
+		}
+	
+	#main #right {
+		width: 200px;
+		margin: 0;
+		border: none;
+		width: 200px;
+		font-size: 12px;
+		line-height: 1.4em;
+		color: #888;
+	}
+		
+		#main #right h2 {
+			font-size: 14px;
+			color: #777;
+		}
+
+
+	#main .section {
+		padding: 15px 14px 0 15px;
+		border-right: 1px dotted #eee;
+		overflow: hidden;
+		float: left;
+	}
+
+	#main .post {
+		margin: 0 0 20px 0;
+	}
+	
+		#main .post .post-body.too-tall { height: 120px; }
+		#main .post .post-body.too-tall.show { height: auto; }
+		#main .post .post-body {
+			overflow: hidden;
+			position: relative;
+			margin: 0 0 2px 0;
+		}
+		
+			#main .post .post-body a {
+				color: #999;
+			}
+			
+			#main .post .post-body a:hover {
+				color: #000;
+			}
+		
+		#main .post-body.too-tall .post-fade {
+			background: url('/images/fade.png') repeat-x bottom left;
+			display: block;
+			width: 100%;
+			height: 24px;
+			position: absolute;
+			z-index: 1000;
+			bottom: 0;
+			left: 0;
+		}
+	
+		.post .feat-img {
+			margin: 0 auto 5px 0;
+			display: block;
+		}
+	
+		#main .post .toggle_full, #main .post .zoom {
+			float: right;
+		}
+		
+		#main .post .zoom {
+			margin: 0 10px 0 0;
+		}
+	
+		#main .post hr, #main .post small, #main .post .feedflare {
+			display: none;
+		}
+	
+		.post-date {
+			color: #888;
+			margin: -2px 0 2px 0;
+			display: block;
+		}
+		
+			#left .post-date {
+				margin: -4px 0 2px 0;
+			}
+	
+		.post-title {
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 22px;
+			line-height: 1.2em;
+			margin: 0;
+			color: #000;
+			text-decoration: none;
+		}
+		
+		h2 span a:hover { text-decoration: underline; }
+		h2 span a {
+			font-weight: normal;
+			color: #bbb;
+			text-decoration: none;
+		}
+
+#post_modal {
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    margin-left: -400px;
+    width: 800px;
+    height: 80%;
+    background-color: #fff;
+    color: #333;
+    padding: 12px;
+    z-index: 1001;
+    overflow: auto;
+    font-weight: normal;
+}
+
+#overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	opacity: 0.5;
+	left: 0;
+	top: 0;
+	background-color: #000;
+}
+
+* html #modal {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
